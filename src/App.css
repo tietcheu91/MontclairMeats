@@ -2,7 +2,7 @@ nav {
   background-color: #012f01;
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px;
 }
@@ -68,10 +68,13 @@ p {
 } */
 
 label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+  display: table;
+  /* flex-direction: column; */
+  margin-bottom: 0px;
+  margin-top: 20px;
   font-size: 18px;
+  width: 100%;
+  max-width: 500px;
 }
 
 input, select {
@@ -94,7 +97,7 @@ select {
 }
 
 button {
-  /* background-color: #007bff; */
+  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
