@@ -51,8 +51,9 @@
   .home-text_heading {
     font-size: 18px;
     text-align: center;
-    margin-top: -35px;
-    font-family: fantasy;
+    margin-top: -50px;
+    font-family: sequel;
+    margin-bottom: 10px;
   }
 
   .home-text {

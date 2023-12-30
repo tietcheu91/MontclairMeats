@@ -30,7 +30,7 @@ function Home() {
     <div>
       <div className="home-container">
         {/* <h1 className="home-heading">Montclair Meats</h1> */}
-        <p className="home-heading">Montclair Meats</p>
+        <p className="home-heading">MONTCLAIR MEATS</p>
         <span className="home-text_heading"> Whole Animal Butchery </span>
         <div className="home-slider">
           <Slider {...settings}>
