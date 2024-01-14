@@ -20,6 +20,10 @@
     padding: 20px;
     border-radius: 5px;
   }
+
+  .full-contact{
+    width: 100%;
+  }
   
   .contact-heading {
     font-size: 24px;
@@ -45,7 +49,6 @@
   label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
     font-size: 18px;
     width: 100%;
   }

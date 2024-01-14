@@ -13,6 +13,7 @@ function Contact() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     /**
      * Handles form submission by logging the form data to the console.
@@ -20,45 +21,55 @@ function Contact() {
      */
     const handleSubmit = (event) => {
         event.preventDefault();
+        setIsSubmitted(true);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
         console.log('Name:', name);
         console.log('Email:', email);
         console.log('Phone:', phone);
         console.log('Message:', message);
     };
 
+    const isFormValid = () => {
+        return name && email && phone && message;
+    };
+
     return (
         <div className="contact-container">
             <h1 className="contact-heading">Contact Us</h1>
             <Form onSubmit={handleSubmit}>
-                <FormGroup>
+                <FormGroup className="full-contact">
                     <Label for="name">
                         <FontAwesomeIcon icon={faUser} className="mr-2" />
                         Name
                     </Label>
                     <Input type="text" name="name" id="name" value={name} onChange={(event) => setName(event.target.value)} placeholder="Enter your name" required />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup className="full-contact">
                     <Label for="email">
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Email
                     </Label>
-                    <Input type="email" name="email" id="email" value={email} onChange={(event) => setEmail(event.targaet.value)} placeholder="Enter your email" required />
+                    <Input type="email" name="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Enter your email" required />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup className="full-contact">
                     <Label for="phone">
                         <FontAwesomeIcon icon={faPhone} className="mr-2" />
                         Phone
                     </Label>
                     <Input type="tel" name="phone" id="phone" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="Enter your phone number" />
-                </FormGroup>
-                <FormGroup>
+                </FormGroup >
+                <FormGroup className="full-contact">
                     <Label for="message">
                         <FontAwesomeIcon icon={faComment} className="mr-2" />
                         Message
                     </Label>
                     <Input type="textarea" name="message" id="message" value={message} onChange={(event) => setMessage(event.target.value)} placeholder="Enter your message" required />
                 </FormGroup>
-                <Button color="primary" type="submit">Submit</Button>
+                <Button color="primary" type="submit" type="submit" disabled={!isFormValid()} >Submit</Button>
+                {isSubmitted && <p className='contact_text'>Thank you for contacting us, we will get back to you as soon as possible!</p>}
             </Form>
         </div>
     );
