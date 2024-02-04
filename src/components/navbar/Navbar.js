@@ -16,11 +16,11 @@ function Navbar() {
         </NavLink>
       </div> */}
       <ul className="navbar-links">
-      <li >
+      {/* <li >
       <NavLink to="/" className="navbar-logo-link">
           <img src={logo} className="logo_style" alt="Logo" />
         </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink exact to="/" className="navbar-link" activeClassName="active" exact>
             Home

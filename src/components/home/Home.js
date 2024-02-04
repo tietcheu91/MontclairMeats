@@ -6,6 +6,8 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import ICU from "i18next-icu";
+import logo from '../../images/logoMM.jpg';
+import backgroundImage from "../../images/Farm.jpg";
 import "./Home.css";
 
 function Home() {
@@ -20,9 +22,9 @@ function Home() {
   };
 
   const images = [
-    { src: require("../../images/Fresh-Meat.jpg"), alt: "resh-Meat" },
+    // { src: require("../../images/Fresh-Meat.jpg"), alt: "resh-Meat" },
     { src: require("../../images/homemeat.jpg"), alt: "homemeat" },
-    { src: require("../../images/meat.jpg"), alt: "meat" },
+    // { src: require("../../images/meat.jpg"), alt: "meat" },
     // { src: require('../../images/logo.jpg'), alt: 'Shirt' },
   ];
 
@@ -30,8 +32,7 @@ function Home() {
     <div>
       <div className="home-container">
         {/* <h1 className="home-heading">Montclair Meats</h1> */}
-        <p className="home-heading">MONTCLAIR MEATS</p>
-        <span className="home-text_heading"> Whole Animal Butchery </span>
+        <img src={logo} className="logo_style" alt="Logo" />
         <div className="home-slider">
           <Slider {...settings}>
             {images.map((image, index) => (
@@ -42,14 +43,13 @@ function Home() {
           </Slider>
         </div>
         <br></br>
-        <br></br>
+        <br></br> 
         <p className="home-text">Store Hours:
-        <br></br>Shop: 9AM - 8PM every day</p>
+        <br></br>Shop: 10AM - 6PM Tues-Sat</p>
         <p className="home-text">Location:
         <br></br>151 Valley Road
         <br></br>Montclair, NJ  07042</p>
         <p className="home-text">Contact:
-        <br></br>Phone: (555) 555-5555
         <br></br>Email: info@montclairmeats.com</p>
       </div>
     </div>

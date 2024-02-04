@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faPhone, faComment } from '@fortawesome/free-solid-svg-icons';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { send } from 'emailjs-com';
 import './Contact.css';
 
 /**
@@ -30,6 +31,25 @@ function Contact() {
         console.log('Email:', email);
         console.log('Phone:', phone);
         console.log('Message:', message);
+        let toSend = {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message
+          };
+
+        send(
+            'service_vf6p3fs',
+            'template_74etbt6',
+            toSend, 
+            'W5GDqXCv90Wj_43rK'
+          )
+            .then((response) => {
+              console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((err) => {
+              console.log('FAILED...', err);
+            });
     };
 
     const isFormValid = () => {

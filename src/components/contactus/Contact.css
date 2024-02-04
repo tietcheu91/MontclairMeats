@@ -37,6 +37,10 @@
     margin-top: 50px;
     max-width: 500px;
   }
+
+  .contact_text{
+    color: green;
+  }
   
   /* label {
     display: flex;
