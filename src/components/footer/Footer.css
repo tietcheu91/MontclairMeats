@@ -6,13 +6,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #042104;
+    background-color: var(--background-dark-color);
     color: #fff;
     padding: 20px;
   }
   
   .footer-social a {
-    color: #fff;
+    color: darkolivegreen;
     font-size: 24px;
     margin-right: 10px;
   }
@@ -23,5 +23,5 @@
   
   .footer-text {
     font-size: 14px;
-    margin-right: 40px;
+    /* margin-right: 40px; */
   }

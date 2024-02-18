@@ -82,7 +82,7 @@ const About = () => {
             sx={{
               padding: "10px",
               margin: "10px",
-              backgroundColor: "aliceblue",
+              backgroundColor: "#f5f5f5",
               borderRadius: "5px",
             }}
           >
@@ -105,7 +105,7 @@ const About = () => {
             sx={{
               padding: "10px",
               margin: "10px",
-              backgroundColor: "aliceblue",
+              backgroundColor: "#f5f5f5",
               borderRadius: "5px",
             }}
           >
@@ -129,7 +129,7 @@ const About = () => {
             sx={{
               padding: "10px",
               margin: "10px",
-              backgroundColor: "aliceblue",
+              backgroundColor: "#f5f5f5",
               borderRadius: "5px",
             }}
           >

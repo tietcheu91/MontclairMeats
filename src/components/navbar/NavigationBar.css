@@ -1,0 +1,105 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-dark-color: #10121A;
+  --background-dark-grey: #191D2B;
+  --border-color: #2e344e;
+  --background-light-color: #f1f1f1;
+  --background-light-color-2: rgba(3, 127, 255, 0.3);
+  --white-color: #fff;
+  --font-light-color: #a4acc4;
+  --font-dark-color: #313131;
+  --font-dark-color-2: #151515;
+  --sidebar-dark-color: #191D2B;
+  --scrollbar-bg-color: #383838;
+  --scrollbar-thump-color: #6b6b6b;
+  --scrollbar-track-color: #383838;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+nav a {
+  color: darkolivegreen;
+  text-decoration: none;
+  margin: 0 2rem;
+  transition: all 0.3s ease;
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: var(--background-dark-color);
+  padding: 0 2rem;
+}
+
+header .nav-btn {
+  color: var(--white-color);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1028px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+  header nav{
+    background-color: var(--background-dark-color);
+    position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+  
+  }
+
+  header .show-nav{
+    transform: translateY(100vh);
+  }
+
+  nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 20rem;
+    /* float: right; */
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}
+

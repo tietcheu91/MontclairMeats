@@ -14,9 +14,9 @@ export default function Footer() {
       <div className="footer-social">
         {/* <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><FaTwitter /></a> */}
-        <a href="https://www.instagram.com/montclair_meats/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+        <a href="https://www.https://www.instagram.com/montclair_meats/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
       </div>
-      <div className="footer-text">
+      <div className="footer-text text-center">
         <Typography variant="body2" color="white" align="center">
             {'Copyright © '}
             <Link color="inherit" href="http://localhost:3000/">

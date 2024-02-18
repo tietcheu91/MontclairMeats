@@ -6,52 +6,65 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import ICU from "i18next-icu";
-import logo from '../../images/logoMM.jpg';
-import backgroundImage from "../../images/Farm.jpg";
+import logo from "../../images/logoMM.jpg";
+import backgroundImage from "../../images/homemeat.jpg";
 import "./Home.css";
 
 function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, // enable auto scrolling
-    autoplaySpeed: 3000, // set the duration between slides to 3 seconds
-  };
-
-  const images = [
-    // { src: require("../../images/Fresh-Meat.jpg"), alt: "resh-Meat" },
-    { src: require("../../images/homemeat.jpg"), alt: "homemeat" },
-    // { src: require("../../images/meat.jpg"), alt: "meat" },
-    // { src: require('../../images/logo.jpg'), alt: 'Shirt' },
-  ];
-
   return (
     <div>
       <div className="home-container">
-        {/* <h1 className="home-heading">Montclair Meats</h1> */}
         <img src={logo} className="logo_style" alt="Logo" />
-        <div className="home-slider">
-          <Slider {...settings}>
-            {images.map((image, index) => (
-              <div key={index}>
-                <img src={image.src} alt={image.alt} />
-              </div>
-            ))}
-          </Slider>
-        </div>
-        <br></br>
-        <br></br> 
-        <p className="home-text">Store Hours:
-        <br></br>Shop: 10AM - 6PM Tues-Sat</p>
-        <p className="home-text">Location:
-        <br></br>151 Valley Road
-        <br></br>Montclair, NJ  07042</p>
-        <p className="home-text">Contact:
-        <br></br>Email: info@montclairmeats.com</p>
       </div>
+
+      <div className="text-light">
+        <img
+          src={backgroundImage}
+          className="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+
+      <hr className="line-spacing-top"></hr>
+
+      <div>
+        <h1 className="text-center quotes-font">"</h1>
+        <h1 className="text-center text-font">
+          Our meat is always fresh and never frozen
+        </h1>
+      </div>
+
+      <hr className="line-spacing-bottom"></hr>
+
+      <div>
+        <p className="home-text">
+          Store Hours:
+          <br></br>Shop: 10AM - 6PM Tues-Sat
+        </p>
+        <p className="home-text">
+          Location:
+          <br></br>151 Valley Road
+          <br></br>Montclair, NJ 07042
+        </p>
+        <p className="home-text">
+          Contact:
+          <br></br>Email: info@montclairmeats.com
+        </p>
+      </div>
+
+      {/* <div className="container-fluid">
+      <div className="row ml-4 mr-4">
+        <div className="col-lg-4 col-md-6 col-sm-12 mb-4 h-100">
+          <div className="card p-2">
+            <img src={backgroundImage} className="img-fluid" alt="Responsive image" />
+            <div className="card-body">
+              <h5 className="card-title">Fresh Meat</h5>
+              <p className="card-text">Our meat is always fresh and never frozen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> */}
     </div>
   );
 }

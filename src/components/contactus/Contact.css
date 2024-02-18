@@ -42,14 +42,6 @@
     color: green;
   }
   
-  /* label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    font-size: 18px;
-    width: 100%;
-  } */
-
   label {
     display: flex;
     flex-direction: column;
@@ -72,7 +64,6 @@
     margin-top: 5px;
     font-size: 16px;
     width: 100%;
-    /* max-width: 800px; */
   }
   
   button[type="submit"] {
