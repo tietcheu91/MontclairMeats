@@ -17,6 +17,12 @@
     align-items: center;
     justify-content: center;
   }
+
+  .text-font-history{
+    color: white;
+    padding: 50px 200px;
+    background-color: darkolivegreen;
+  }
   
   .home-heading {
     font-size: 36px;
