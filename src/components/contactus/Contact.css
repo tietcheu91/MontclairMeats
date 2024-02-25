@@ -23,6 +23,7 @@
 
   .full-contact{
     width: 100%;
+    color: darkolivegreen;
   }
   
   .contact-heading {
@@ -67,7 +68,7 @@
   }
   
   button[type="submit"] {
-    background-color: #007bff;
+    background-color: darkolivegreen;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -79,5 +80,5 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #0062cc;
+    background-color: darkolivegreen;
   }

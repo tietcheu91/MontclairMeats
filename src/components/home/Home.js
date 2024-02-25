@@ -6,6 +6,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import ICU from "i18next-icu";
+import { Card, CardContent, Typography, Box } from "@mui/material";
 import logo from "../../images/logoMM.jpg";
 import backgroundImage from "../../images/big_child_dirt.jpeg";
 import "./Home.css";
@@ -52,6 +53,103 @@ function Home() {
         This is why take a lot of pride in the meat we sell to our customers.
         </p>
       </div>
+
+      <hr className="line-spacing-top"></hr>
+      <div>
+        <h1 className="text-center text-font">
+          About Us
+        </h1>
+      </div>
+      <hr className="line-spacing-bottom"></hr>
+
+      {/* <Card className="text-center" sx={{ margin: 3 }}> */}
+        {/* <CardContent > */}
+        <div className="text-center text-space">
+          <Typography
+            variant="h6"
+            component="div"
+            gutterBottom
+            style={{
+              color: "#012f01",
+              fontWeight: "bold",
+              marginBottom: "20px",
+            }}
+          >
+            What is Butchery?
+          </Typography>
+          <Typography
+            variant="body1"
+            color="text.secondary" 
+            className="text-buchery"
+            style={{ fontSize: "15px", lineHeight: "1.6", color: "#333"}}
+          >
+            <bold>Whole animal butchery</bold> is the practice of receiving
+            whole animals carcasses and breaking it down instead of receiving
+            parts of an animal in bulk standard cuts.
+            <br />
+            <br />
+            This type of practice supports small local farms instead of large
+            feed lot/factory farms that are harmful to our planet.
+            <br />
+            <br />
+            It requires very experienced butchers who can customize cuts or
+            roasts for you the consumer depending on the season. Since we
+            receive the entire carcass, you will find a variety of cuts of beef,
+            pork and lamb that you do not see in traditional butcher shops.
+          </Typography>
+        {/* </CardContent> */}
+      {/* </Card> */}
+      </div>
+
+      <br />
+          <Typography
+            variant="h6"
+            component="div"
+            className="text-center"
+            gutterBottom
+            style={{
+              color: "#012f01",
+              fontWeight: "bold",
+              marginBottom: "20px",
+            }}
+          >
+            Our Values
+          </Typography>
+
+      <div className="container-fluid">
+      <div className="row ml-4 mr-4">
+        <div className="col-lg-4 col-md-6 col-sm-12 mb-4 h-100">
+          <div className="card p-2">
+            <img src={backgroundImage} className="img-fluid" alt="Responsive image" />
+            <div className="card-body">
+              <h5 className="card-title header-card">Sustainability</h5>
+              <p className="card-text body-card">You are supporting ethical practices from small local farms and
+              butchers who limit waste creating a more sustainable system</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6 col-sm-12 mb-4 h-100">
+          <div className="card p-2">
+            <img src={backgroundImage} className="img-fluid" alt="Responsive image" />
+            <div className="card-body">
+              <h5 className="card-title header-card">Freshness</h5>
+              <p className="card-text body-card">The by product of reducing the time your meat is cut and sold,
+              sourcing from local farms that are grass fed and pasture raised
+              results in a fresher, tastier cut of meat</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6 col-sm-12 mb-4 h-100">
+          <div className="card p-2">
+            <img src={backgroundImage} className="img-fluid" alt="Responsive image" />
+            <div className="card-body">
+              <h5 className="card-title header-card">Source Clarity</h5>
+              <p className="card-text body-card">You know where your meat is coming from</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <div>
         <p className="home-text">

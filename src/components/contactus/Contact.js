@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faPhone, faComment } from '@fortawesome/free-solid-svg-icons';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { useFormik } from 'formik';
 import { send } from 'emailjs-com';
 import './Contact.css';
 
@@ -20,6 +21,28 @@ function Contact() {
      * Handles form submission by logging the form data to the console.
      * @param {Event} event - The form submission event.
      */
+    const validate = (values) => {
+        const errors = {}
+        
+        if (!values.email) {
+            errors.email = 'Required'
+        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+            errors.email = 'Invalid email address'
+        }
+        
+        return errors
+    }
+
+    const formik = useFormik({
+        initialValues: {
+          email: '',
+        },
+        validate,
+        onSubmit: (values) => {
+          alert(JSON.stringify(values, null, 2))
+        },
+      })
+
     const handleSubmit = (event) => {
         event.preventDefault();
         setIsSubmitted(true);
@@ -72,14 +95,17 @@ function Contact() {
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Email
                     </Label>
-                    <Input type="email" name="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Enter your email" required />
+                    <Input type="email" name="email" id="email" value={email} onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} placeholder="Enter your email" required />
+          {formik.touched.email && formik.errors.email ? (
+            <span>{formik.errors.email}</span>
+          ) : null}
                 </FormGroup>
                 <FormGroup className="full-contact">
                     <Label for="phone">
                         <FontAwesomeIcon icon={faPhone} className="mr-2" />
                         Phone
                     </Label>
-                    <Input type="tel" name="phone" id="phone" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="Enter your phone number" />
+                    <Input type="number" name="phone" id="phone" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="Enter your phone number" />
                 </FormGroup >
                 <FormGroup className="full-contact">
                     <Label for="message">
@@ -88,7 +114,7 @@ function Contact() {
                     </Label>
                     <Input type="textarea" name="message" id="message" value={message} onChange={(event) => setMessage(event.target.value)} placeholder="Enter your message" required />
                 </FormGroup>
-                <Button color="primary" type="submit" type="submit" disabled={!isFormValid()} >Submit</Button>
+                <Button color="primary" type="submit" disabled={!isFormValid()} >Submit</Button>
                 {isSubmitted && <p className='contact_text'>Thank you for contacting us, we will get back to you as soon as possible!</p>}
             </Form>
         </div>
