@@ -8,7 +8,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import ICU from "i18next-icu";
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import logo from "../../images/logoMM.jpg";
-import backgroundImage from "../../images/big_child_dirt.jpeg";
+import backgroundImage from "../../images/big_child_dirt.jpg";
 import "./Home.css";
 
 function Home() {
