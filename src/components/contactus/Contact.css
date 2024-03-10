@@ -21,6 +21,13 @@
     border-radius: 5px;
   }
 
+  .icon-position {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
   .full-contact{
     width: 100%;
     color: darkolivegreen;
@@ -34,7 +41,7 @@
   form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 50px;
     max-width: 500px;
   }

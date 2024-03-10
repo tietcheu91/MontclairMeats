@@ -66,7 +66,7 @@ label {
   display: table;
   /* flex-direction: column; */
   margin-bottom: 0px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: 18px;
   width: 100%;
   max-width: 500px;

@@ -23,6 +23,12 @@
     color: darkolivegreen;
   }
 
+  ul {
+    list-style-type: disc; /* Removes the default bullet points */
+    padding: 0; /* Removes the default padding */
+
+}
+
   .text-space{
     padding: "0px 150px"; 
     margin: "20px"
@@ -101,6 +107,15 @@
   .text-buchery{
     padding: 50px 200px;
   }
+  .list-text{
+    text-align: justify;
+  }
+
+  .unordered-text{
+    padding: 20px 0px 20px 300px;
+    font-size: small;
+    font-weight: 700;
+  }
 
   @media only screen and (max-width: 450px){
     .text-font-history{
@@ -111,5 +126,10 @@
 
     .text-buchery{
       padding: 20px 50px;
+    }
+    .unordered-text{
+      padding: 20px 0px 20px 30px;
+      font-size: small;
+      font-weight: 700;
     }
   }

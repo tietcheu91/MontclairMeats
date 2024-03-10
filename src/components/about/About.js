@@ -2,7 +2,7 @@ import * as React from "react";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import { Card, CardContent, Typography, Box } from "@mui/material";
-import backgroundImage from "../../images/Beautiful-Cow-2560x1600.jpeg";
+import backgroundImage from "../../images/natureSky.jpg";
 import "./About.css";
 
 const About = () => {
