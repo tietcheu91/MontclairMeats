@@ -31,12 +31,12 @@ function Home() {
 
       <hr className="line-spacing-top"></hr>
 
-      <div>
+      {/* <div>
         <h1 className="text-center quotes-font">"</h1>
         <h1 className="text-center text-font">
           We work with local farmers to provide the freshest ethically raised meat
         </h1>
-      </div>
+      </div> */}
 
       <hr className="line-spacing-bottom"></hr>
 
