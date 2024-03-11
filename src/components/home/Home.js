@@ -34,7 +34,7 @@ function Home() {
       <div>
         <h1 className="text-center quotes-font">"</h1>
         <h1 className="text-center text-font">
-          We believe in the power of grass-fed meat
+          We work with local farmers to provide the freshest ethically raised meat
         </h1>
       </div>
 
@@ -43,17 +43,16 @@ function Home() {
       <div>
         {/* <h1 className="text-center quotes-font">"</h1> */}
         <p className="text-center text-font-history">
-        We work with with farmers who feed their cows on a purely grass-based diet. 
-        <br/>
-        We believe that this is how they are designed to live and feed, and we take pride in our herds having a natural way of life, roaming the hills and creating family bonds.  
+         <span className="why-text">Why Whole Animal Butchery?</span> 
         <br/>
         <br/>
-        Healthy grass is a must as it contributes to our cows living totally natural lives. 
-        <br/>
-        We have seen great results feeding our cows a grass-based diet over the years, and it has been instrumental to helping us run our farm in a nature-focused and cost-effective way
-        <br/>
-        <br/>
-        This is why take a lot of pride in the meat we sell to our customers.
+        This whole animal practice has a number of meaningful benefits which include:
+            <br />
+            <ul className="unordered-text">
+              <li className="list-text">Supporting local farms that employ sustainable farming strategies</li>
+              <li className="list-text">Ensuring that animals are raised ethically</li>
+              <li className="list-text">Minimizing waste and reducing the carbon footprint of the production process</li>
+            </ul>
         </p>
       </div>
 
@@ -95,13 +94,7 @@ function Home() {
             where standard cuts of meat are delivered in bulk from feedlot or factory farms. 
             <br />
             <br />
-            This whole animal practice has a number of meaningful benefits which include:
-            <br />
-            <ul className="unordered-text">
-              <li className="list-text">Supporting local farms that employ sustainable farming strategies</li>
-              <li className="list-text">Ensuring that animals are raised ethically</li>
-              <li className="list-text">Minimizing waste and reducing the carbon footprint of the production process</li>
-            </ul>
+            
 
           </Typography>
         {/* </CardContent> */}

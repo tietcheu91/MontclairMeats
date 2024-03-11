@@ -105,19 +105,24 @@
   }
 
   .text-buchery{
-    padding: 50px 200px;
+    padding: 50px 350px;
   }
   .list-text{
-    text-align: justify;
+    text-align: left;
+  }
+  .why-text{
+    font-size: x-large;
+    font-weight: 700;
   }
 
   .unordered-text{
     padding: 20px 0px 20px 300px;
-    font-size: small;
+    font-size: large;
     font-weight: 700;
+    line-height: 35px;
   }
 
-  @media only screen and (max-width: 450px){
+  @media only screen and (max-width: 1280px){
     .text-font-history{
       color: white;
       padding: 20px 50px;
@@ -131,5 +136,7 @@
       padding: 20px 0px 20px 30px;
       font-size: small;
       font-weight: 700;
+      line-height: 20px;
     }
+    
   }
