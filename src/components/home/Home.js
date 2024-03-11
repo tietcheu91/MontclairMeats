@@ -168,8 +168,7 @@ function Home() {
           <br></br>Phone: 973-330-0310
         </p>
         <p className="home-text">
-          Amenties:
-          <br></br>Private Event Space Available
+          Private Event Space Available
           <br></br>Free Parking in Back
         </p>
       </div>
