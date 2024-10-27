@@ -7,6 +7,7 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import ICU from "i18next-icu";
 import { Card, CardContent, Typography, Box } from "@mui/material";
+import { Link } from 'react-router-dom'; 
 import logo from "../../images/logoMM.jpg";
 import backgroundImage from "../../images/handWithPotatoes.jpg";
 import sourceImage from "../../images/twoCows.jpg";
@@ -22,11 +23,23 @@ function Home() {
       </div>
 
       <div className="text-light">
-        <img
-          src={backgroundImage}
-          className="img-fluid"
-          alt="Responsive image"
-        />
+        <div className="background-image-container">
+          <img
+            src={backgroundImage}
+            className="img-fluid"
+            alt="Responsive image"
+          />
+          <div className="overlay">
+            {/* <Link to="/gift-cards" className="gift-card-button">Gift Card</Link> */}
+            <a href="https://app.squareup.com/gift/ML8JG5DV2JPJJ/order" class="button type--C">
+              <div class="button__line"></div>
+              <div class="button__line"></div>
+              <span class="button__text">Gift Card</span>
+              <div class="button__drow1"></div>
+              <div class="button__drow2"></div>
+            </a>
+          </div>
+        </div>
       </div>
 
       <hr className="line-spacing-top"></hr>
