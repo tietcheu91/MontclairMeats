@@ -169,8 +169,8 @@ function Home() {
         <p className="home-text">
           Store Hours:
           <br></br>Tuesday thru Friday: 10AM - 6PM 
-          <br></br>Saturday: 10AM - 4PM 
-          <br></br>Sunday & Monday - closed
+          <br></br>Saturday & Sunday: 10AM - 3PM 
+          <br></br>Monday - closed
         </p>
         <p className="home-text">
           Location:
